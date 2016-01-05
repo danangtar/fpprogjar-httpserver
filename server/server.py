@@ -146,8 +146,9 @@ class handle_file():
     def cek_file(self):
         path = self.path.split('/')
         path = '/'.join(path)
-        if path[-1] is not '/':
-            path += '/'
+        if path is not '':
+            if path[-1] is not '/':
+                path += '/'
         if os.path.isfile(path+'redir.mmm'):
             faile = open(path+'redir.mmm', 'rb')
             redir = faile.read()
